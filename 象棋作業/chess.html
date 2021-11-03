@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .bigcontainer {
+            width: 80px;
+            height: 80px;
+            border: 2px solid #000;
+            display: flex;
+            justify-content: center;
+            align-content: center;
+
+
+        }
+
+        .container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            border: solid 1px #000;
+            margin: auto;
+            width: 600px;
+            height: 730px;
+
+
+
+        }
+
+        .col1 {
+            background: #ffa;
+            margin: 0px;
+            border: 1px solid #000;
+            height: 70px;
+        }
+
+        .col2 {
+            height: 300px;
+            margin: 0px;
+            width: 40px;
+            border: 1px solid #000;
+
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 500px;
+            height: 280px;
+            top: 400px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: relative;
+        }
+
+        .table2 {
+            border-collapse: collapse;
+            width: 500px;
+            height: 280px;
+            top: -230px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            position: relative;
+        }
+
+
+
+        td {
+
+            border: 1px solid #000;
+            color: #fff;
+        }
+
+        .td2 {
+            width: 500px;
+            height: 70px;
+            position: absolute;
+            top: 330px;
+            left: 49px;
+            border: 1px solid #333;
+            display: flex;
+            justify-content: space-around;
+            font-size: 3rem;
+
+        }
+
+        .line {
+            border: 0px solid #000;
+            width: 140px;
+            position: relative;
+            top: 50px;
+            left: 230px;
+        }
+
+        .line::before {
+            content: "";
+            transform: rotate(311deg);
+            border: 1px solid rgb(141, 143, 143);
+            width: 180px;
+            position: absolute;
+            top: 70px;
+            left: -21px;
+        }
+
+        .line::after {
+            content: "";
+            transform: translate(-50%, -50%) rotate(49deg);
+            border: 1px solid rgb(116, 111, 111);
+            width: 180px;
+            position: absolute;
+            top: 70px;
+            left: 70px;
+        }
+
+
+        .line2 {
+            border: 0px solid #000;
+            width: 140px;
+            position: relative;
+            top: 610px;
+            left: 230px;
+
+        }
+
+        .line2::before {
+            content: "";
+            transform: translate(-50%, -50%) rotate(47deg);
+            border: 1px solid rgb(116, 111, 111);
+            width: 189px;
+            position: absolute;
+            top: 0px;
+            left: 70px;
+        }
+
+        .line2::after {
+            content: "";
+            transform: translate(-50%, -50%) rotate(310deg);
+            border: 1px solid rgb(116, 111, 111);
+            width: 160px;
+            position: absolute;
+            top: -9px;
+            left: 78px;
+        }
+
+        .chesscontainer {
+            width: 530px;
+            height: 100px;
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            top: 35px;
+            left: 35px;
+        }
+
+        .chess {
+            width: 40px;
+            height: 40px;
+            border: 1px solid #000;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            position: relative;
+            z-index: 999;
+            background: white;
+            font-family: DFKai-sb;
+            font-size: 2rem;
+
+        }
+
+        .chesscontainer2 {
+            width: 412px;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 160px;
+            left: 93px;
+
+        }
+
+        .chesscontainer3 {
+            width: 540px;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 230px;
+            left: 25px;
+
+        }
+
+
+        .chesscontainer4 {
+            width: 540px;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 450px;
+            left: 25px;
+            color: red;
+
+        }
+
+        .chesscontainer5 {
+            width: 412px;
+            height: 100px;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 520px;
+            left: 93px;
+            color: red;
+
+        }
+
+
+        .chesscontainer6 {
+            width: 530px;
+            height: 100px;
+            display: flex;
+            position: absolute;
+            justify-content: space-between;
+            top: 650px;
+            left: 35px;
+            color: red;
+        }
+
+
+        .text1 {
+            font-size: 2.0rem;
+            position: relative;
+            top: -550px;
+            left: 650px;
+            width: 10px;
+
+        }
+
+        .text2 {
+            font-size: 2.0rem;
+            position: relative;
+            top: -1380px;
+            left: -100px;
+            width: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="line"></div>
+        <div class="line2"></div>
+
+        <div class="td2">
+            <div>楚河</div>
+            <div>漢界</div>
+        </div>
+
+
+
+
+
+        <table>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+        </table>
+
+
+        <table class="table2">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+
+
+            <div class="chesscontainer">
+                <div class="chess">
+                    <p>車</p>
+                </div>
+                <div class="chess">
+                    <p>馬</p>
+                </div>
+                <div class="chess">
+                    <p>象</p>
+                </div>
+                <div class="chess">
+                    <p>士</p>
+                </div>
+                <div class="chess">
+                    <p>將</p>
+                </div>
+                <div class="chess">
+                    <p>士</p>
+                </div>
+                <div class="chess">
+                    <p>象</p>
+                </div>
+                <div class="chess">
+                    <p>馬</p>
+                </div>
+                <div class="chess">
+                    <p>車</p>
+                </div>
+            </div>
+
+            <div class="chesscontainer2 mx">
+                <div class="chess">
+                    <p>包</p>
+                </div>
+                <div class="chess">
+                    <p>包</p>
+                </div>
+            </div>
+
+
+            <div class="chesscontainer3 mx">
+                <div class="chess">
+                    <p>卒</p>
+                </div>
+                <div class="chess">
+                    <p>卒</p>
+                </div>
+                <div class="chess">
+                    <p>卒</p>
+                </div>
+                <div class="chess">
+                    <p>卒</p>
+                </div>
+                <div class="chess">
+                    <p>卒</p>
+                </div>
+            </div>
+
+            <div class="chesscontainer4 mx">
+                <div class="chess">
+                    <p>兵</p>
+                </div>
+                <div class="chess">
+                    <p>兵</p>
+                </div>
+                <div class="chess">
+                    <p>兵</p>
+                </div>
+                <div class="chess">
+                    <p>兵</p>
+                </div>
+                <div class="chess">
+                    <p>兵</p>
+                </div>
+            </div>
+
+            <div class="chesscontainer5 mx">
+                <div class="chess">
+                    <p>炮</p>
+                </div>
+                <div class="chess">
+                    <p>炮</p>
+                </div>
+            </div>
+
+
+
+            <div class="chesscontainer6">
+                <div class="chess">
+                    <p>車</p>
+                </div>
+                <div class="chess">
+                    <p>馬</p>
+                </div>
+                <div class="chess">
+                    <p>象</p>
+                </div>
+                <div class="chess">
+                    <p>士</p>
+                </div>
+                <div class="chess">
+                    <p>將</p>
+                </div>
+                <div class="chess">
+                    <p>士</p>
+                </div>
+                <div class="chess">
+                    <p>象</p>
+                </div>
+                <div class="chess">
+                    <p>馬</p>
+                </div>
+                <div class="chess">
+                    <p>車</p>
+                </div>
+            </div>
+
+
+
+
+
+        </table>
+
+        <div class="text1">
+            <P>圖畫裡 ， 龍不吟 ， 虎不嘯 ， 小小書僮可笑可笑 </P>
+        </div>
+
+
+        <div class="text2">
+            <P>棋盤裡 ， 車無輪 ，馬無韁 ， 叫聲將提防提防</P>
+        </div>
+
+
+
+
+
+
+
+
+
+
+        <!--<div class="container">
+        <div class="col1"></div>
+        <div class="col1"></div>
+        <div class="col1"></div>
+        <div class="col1"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>
+        <div class="col2"></div>-->
+
+    </div>
+    </div>
+
+</body>
+
+</html>
